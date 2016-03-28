@@ -1,5 +1,9 @@
 import { combineReducers } from 'redux';
+
+// Import all the reducers our app requires
+
 import BooksReducer from './reducer_books';
+import ActiveBookReducer from './reducer_active_book';
 
 const rootReducer = combineReducers({
   /*
@@ -10,7 +14,8 @@ const rootReducer = combineReducers({
        activeBook: {title: "Javascript: The good parts"} -> ActiveBook Reducer
      }
    */
-  books: BooksReducer
+  books: BooksReducer,
+  activeBook: ActiveBookReducer
 });
 
 export default rootReducer;
